@@ -1,0 +1,44 @@
+<mat-toolbar class="toolbar mat-elevation-z4">
+  <a routerLink="/">
+    <img src="../../../../assets/img/logo.svg" alt="" class="logo" />
+    <div class="title-group">
+      <i class="material-icons">theaters</i>
+      <h1>Films Blog</h1>
+    </div>
+    <nav>
+      <!-- Mobile -->
+      <button class="mat-button" mat-icon-button [matMenuTriggerFor]="afterMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu class="mat-menu-content disabled" #afterMenu="matMenu" xPosition="after">
+        <button mat-menu-item>
+          <a routerLink="/" class="link">
+            <mat-icon class="mat-menu-descrition">home</mat-icon>
+            <span class="mat-menu-descrition">Home</span>
+          </a>
+        </button>
+        <button mat-menu-item (click)="about()">
+          <a routerLink="/" class="link">
+            <mat-icon class="mat-menu-descrition">import_contacts</mat-icon>
+            <span class="mat-menu-descrition">About</span>
+          </a>
+        </button>
+      </mat-menu>
+      <!-- Desktop -->
+    </nav>
+  </a>
+  <ul class="list">
+    <li>
+      <a class="link-item" routerLink="/" title="Hbout" (click)="home()">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a class="link-item" routerLink="/" title="about" (click)="about()">
+        <mat-icon>import_contacts</mat-icon>
+        <span>about</span>
+      </a>
+    </li>
+  </ul>
+</mat-toolbar>
